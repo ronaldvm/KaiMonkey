@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
          
       - name: Sigma analysis
-        run: sigma analyze --format github .          
+        run: sigma --policy sigma-policy.yml analyze --format github .          
  
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
