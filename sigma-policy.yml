@@ -1,10 +1,10 @@
 # Policy for SIGMA to fail when defects reported for medium-severity checkers
 - policy:
-    id: CHECKER_POLICY:high-severity
+    id: CHECKER_POLICY:error
     rules:
       - fail:
           set:
             exit-code: 2
-            message: CHECKER_POLICY:high-severity
+            message: CHECKER_POLICY:error
           when:
-            severity: high
+            severity: error
