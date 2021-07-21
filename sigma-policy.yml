@@ -1,17 +1,10 @@
 version: 1
-#policies:
-#  - id: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
-#    when:
-#      checkers:
-#        - unrestricted_ingress_terraform_aws_security_group
-#    result:
-#      exit-code: 1
-#      message: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
-#version: 1
 policies:
-  - id: HighSev_POLICY:high-severity
+  - id: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
     when:
-      severity: high
+      checkers:
+        - unrestricted_ingress_terraform_aws_security_group
     result:
       exit-code: 1
-      message: HighSev_POLICY:high-severity message / Defect from a high severity checker caused this failure.
+      message: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
+
