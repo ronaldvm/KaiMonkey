@@ -1,10 +1,9 @@
-# Policy for SIGMA to fail when defects reported for medium-severity checkers
-- policy:
-    id: CHECKER_POLICY:error
-    rules:
-      - fail:
-          set:
-            exit-code: 2
-            message: CHECKER_POLICY:error
-          when:
-            severity: error
+version: 1
+policies:
+  - id: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
+    when:
+      checkers:
+        - unrestricted_ingress_terraform_aws_security_group
+    result:
+      exit-code: 1
+      message: EXAMPLE_POLICY_CHECKER:unrestricted_ingress_terraform_aws_security_group
